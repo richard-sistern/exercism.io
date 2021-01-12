@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# gem "rails"
+gem 'minitest'
+gem 'guard'
+gem 'guard-minitest'
+# Add the following to your Gemfile to avoid polling for changes
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+# Run 'gem install win32console' to use color on Windows

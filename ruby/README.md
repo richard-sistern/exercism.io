@@ -1,11 +1,13 @@
 # SETUP
 
+Change directory to the exercism track folder
+
 ```shell
 cd ruby
 bundle init
 ```
 
-Configure testing and guard
+**Gemfile**
 
 ```ruby
 gem 'minitest'
@@ -19,7 +21,14 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Run 'gem install win32console' to use color on Windows
 ```
 
+**Guardfile**
+
+```ruby
+
+```
+
 Bundle and run guard
+
 ```shell
 bundle
 bundle exec guard init

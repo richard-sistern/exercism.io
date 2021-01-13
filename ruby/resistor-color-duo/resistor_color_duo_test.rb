@@ -4,7 +4,7 @@ require_relative 'resistor_color_duo'
 # Common test data version: 2.1.0 00dda3a
 class ResistorColorDuoTest < Minitest::Test
   def test_brown_and_black
-    # skip
+    skip
     assert_equal 10, ResistorColorDuo.value(["brown", "black"])
   end
 

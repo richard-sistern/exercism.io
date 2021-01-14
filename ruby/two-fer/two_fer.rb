@@ -1,4 +1,5 @@
 # Late string interpolation
+# Added feedback from Excercism mentor
 
 class TwoFer
   TWO_FER =

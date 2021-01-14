@@ -1,16 +1,16 @@
-# Incorporating improvements from mentor feedback
+# Late string interpolation
 
 class TwoFer
   TWO_FER =
     {
-      English: 'One for %<name>s, one for me.',
-      Spanish: 'Uno para el %<name>s, uno para mí.',
-      German:  'Einer für den %<name>s, einer für mich.',
-      Dutch:   'Eén voor %<name>s, één voor mij.'
+      English: Proc.new {|name| "One for #{name}, one for me."},
+      Spanish: Proc.new {|name| "Uno para el #{name}, uno para mí."},
+      German:  Proc.new {|name| "Einer für den #{name}, einer für mich."},
+      Dutch:   Proc.new {|name| "Eén voor #{name}, één voor mij."}
     }
 
   def self.two_fer(name = 'you', language = :English)
-    TWO_FER[language] % { name: name }
+    TWO_FER[language].call name
   end
 end
 

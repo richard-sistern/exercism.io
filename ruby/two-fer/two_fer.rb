@@ -11,7 +11,9 @@ class TwoFer
     }
 
   def self.two_fer(name = 'you', language = :English)
-    TWO_FER[language].call name
+    # Both equivalent
+    # TWO_FER[language].call name
+    TWO_FER[language] [name]
   end
 end
 

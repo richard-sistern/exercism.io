@@ -4,7 +4,6 @@ class Darts
     end
 
     def score
-      "#{@x} : #{@y}"
       case Math.hypot(@x, @y)
         when 0..1 then 10
         when 1..5 then 5

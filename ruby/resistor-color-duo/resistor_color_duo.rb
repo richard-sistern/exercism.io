@@ -21,6 +21,6 @@ class ResistorColorDuo
 end
 
 if $PROGRAM_NAME == __FILE__
-  puts ResistorColorDuo.value(["orange", "orange"])
-  puts ResistorColorDuo.value(["green", "brown", "orange"])
+  puts ResistorColorDuo.value %w'orange orange'
+  puts ResistorColorDuo.value %w'green brown orange'
 end

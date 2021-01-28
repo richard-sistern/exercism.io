@@ -1,4 +1,6 @@
 class ResistorColorDuo
+  attr_reader :resistance
+
   BANDS =
     {
       black:  0,
@@ -11,10 +13,10 @@ class ResistorColorDuo
       violet: 7,
       grey:   8,
       white:  9
-    }
+    }.freeze
 
   def self.value(colors)
-    new(colors).to_i
+    new(colors).resistance
   end
 
   private
@@ -23,12 +25,7 @@ class ResistorColorDuo
     @resistance = colors.take(2)
       .map {|color| BANDS[color.to_sym]}
       .join
-  end
-
-  public
-
-  def to_i
-    @resistance.to_i
+      .to_i
   end
 end
 

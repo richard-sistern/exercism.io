@@ -1,6 +1,3 @@
-# TODO: Reorder code
-# TODO: Clean comments
-
 class Acronym
   attr_reader :acronym
 
@@ -18,6 +15,9 @@ end
 if $PROGRAM_NAME == __FILE__
   puts Acronym.abbreviate('Portable Network Graphics')
 end
+
+# TODO: Reorder code
+# TODO: Clean comments
 
 # https://ivoanjo.me/blog/2017/09/20/why-i-always-use-attr_reader-to-access-instance-variables/
 # https://stackoverflow.com/questions/46863457/how-to-select-first-letter-of-each-word-of-a-string-using-regex

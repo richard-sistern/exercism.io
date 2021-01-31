@@ -6,7 +6,7 @@ class Year
     # except every year that is evenly divisible by 100
     # unless the year is also evenly divisible by 400
 
-    year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)
+    (year % 4 == 0 && year % 100 != 0) || year % 400 == 0
 
     # % (modulo) gives the remaining of a division
     # https://www.rubyguides.com/2018/07/ruby-operators/

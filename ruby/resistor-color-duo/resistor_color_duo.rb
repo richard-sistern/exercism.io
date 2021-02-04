@@ -20,15 +20,15 @@ class ResistorColorDuo
   private
 
   def initialize(colors)
-    @resistance = colors.take(2)
-      .map {|color| BANDS[color.to_sym]}
-      .join
+    @resistance = colors.take(2).each_with_object('') { |color, value| value << BANDS[color.to_sym].to_s }
   end
+
+  attr_reader :resistance
 
   public
 
   def to_i
-    @resistance.to_i
+    Integer(self.resistance)
   end
 end
 

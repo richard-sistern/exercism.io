@@ -39,3 +39,14 @@ if $PROGRAM_NAME == __FILE__
   puts ResistorColorDuo.value %w'orange orange'
   puts ResistorColorDuo.value %w'green brown orange'
 end
+
+# Test guard for colors black, black
+if defined?(Minitest)
+  describe 'Mentor Custom Test' do
+    it 'must translate ["black", "black"] as 0' do
+      expected = 0
+      actual = ResistorColorDuo.value(['black', 'black'])
+      expect(actual).must_equal expected
+    end
+  end
+end

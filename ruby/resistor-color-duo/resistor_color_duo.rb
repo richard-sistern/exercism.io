@@ -25,7 +25,7 @@ class ResistorColorDuo
 
   def resistance
     @colors
-      .each_with_object('') { |color, value| value << BANDS[color].to_s }
+      .each_with_object('') { |color, digits| digits << BANDS[color].to_s }
   end
 
   public

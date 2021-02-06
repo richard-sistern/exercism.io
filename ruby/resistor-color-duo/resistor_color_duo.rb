@@ -40,7 +40,7 @@ if $PROGRAM_NAME == __FILE__
   puts ResistorColorDuo.value %w'green brown orange'
 end
 
-# Test guard for colors black, black
+# Test guard
 if defined?(Minitest)
   describe 'Mentor Custom Test' do
     it 'must translate ["black", "black"] as 0' do

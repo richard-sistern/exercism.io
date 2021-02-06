@@ -6,7 +6,7 @@ class Acronym
   private
 
   def initialize(phrase)
-    first_char_of_each_word = Regex.new('/\b\w/')
+    first_char_of_each_word = Regexp.new('\b\w')
     @acronym = phrase.scan(first_char_of_each_word).join
   end
 

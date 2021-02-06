@@ -39,10 +39,3 @@ if $PROGRAM_NAME == __FILE__
   puts ResistorColorDuo.value %w'orange orange'
   puts ResistorColorDuo.value %w'green brown orange'
 end
-
-# .LINKS
-# https://www.honeybadger.io/blog/how-ruby-ampersand-colon-works/
-# https://ruby-doc.org/core-2.7.2/Kernel.html#method-i-Integer
-# https://moeffju.net/blog/integer-vs-to_i-in-ruby/
-# http://www.rubyfleebie.com/2007/04/05/to_i-vs-to_int/
-# https://bigbinary.com/blog/ruby-2-6-adds-option-to-not-raise-exception-for-integer-float-methods

@@ -35,4 +35,6 @@ bundle exec guard init
 bundle exec guard
 ```
 
+**Minitest**
 
+[Minitest cheat sheet](https://devhints.io/minitest)

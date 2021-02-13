@@ -1,4 +1,6 @@
 class Acronym
+  FIRST_CHAR_OF_EACH_WORD = Regexp.new('\b\w')
+
   def self.abbreviate(phrase)
     new(phrase).upcase
   end
@@ -6,8 +8,7 @@ class Acronym
   private
 
   def initialize(phrase)
-    first_char_of_each_word = Regexp.new('\b\w')
-    @acronym = phrase.scan(first_char_of_each_word).join
+    @acronym = phrase.scan(FIRST_CHAR_OF_EACH_WORD).join
   end
 
   public

@@ -8,8 +8,3 @@ class Acronym
       .upcase
   end
 end
-
-if $PROGRAM_NAME == __FILE__
-  puts Acronym.abbreviate('Portable Network Graphics')
-  puts Acronym.abbreviate('Something - I made up from thin air')
-end

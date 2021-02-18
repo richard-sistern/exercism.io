@@ -2,19 +2,10 @@ class Acronym
   FIRST_CHAR_OF_EACH_WORD = Regexp.new('\b\w')
 
   def self.abbreviate(phrase)
-    new(phrase).upcase
-  end
-
-  private
-
-  def initialize(phrase)
-    @acronym = phrase.scan(FIRST_CHAR_OF_EACH_WORD).join
-  end
-
-  public
-
-  def upcase
-    @acronym.upcase
+    phrase
+      .scan(FIRST_CHAR_OF_EACH_WORD)
+      .join
+      .upcase
   end
 end
 

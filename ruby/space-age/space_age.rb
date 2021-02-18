@@ -1,7 +1,7 @@
 class SpaceAge
   SECONDS_IN_EARTH_YEAR = 31_557_600
 
-  ORBITAL_PERIODS_IN_EARTH_YEARS = {
+  ORBITAL_PERIOD_IN_EARTH_YEARS = {
     earth:    1,
     mercury:  0.2408467,
     venus:    0.61519726,
@@ -20,13 +20,9 @@ class SpaceAge
 
   public
 
-  ORBITAL_PERIODS_IN_EARTH_YEARS.each do |planet, orbital_period|
+  ORBITAL_PERIOD_IN_EARTH_YEARS.each do |planet, orbital_period|
     define_method("on_#{planet}".to_sym) do
       @seconds / (SECONDS_IN_EARTH_YEAR * orbital_period)
     end
   end
-end
-
-if $PROGRAM_NAME == __FILE__
-  puts SpaceAge.new(1_000_000_000).on_earth # ~31.69
 end

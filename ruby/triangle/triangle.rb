@@ -28,7 +28,7 @@ class Triangle
     # TODO: Rework to remove !
     # the sum of the lengths of any two sides must be greater than or equal to the
     #length of the third side
-    sum_sides = sides.inject(:+)
+    sum_sides = sides.sum
     !sides.any? { |side| (sum_sides - side) <= side }
   end
 end

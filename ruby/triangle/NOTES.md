@@ -13,4 +13,6 @@ Error if @sides.any? { |side| (@sides_sum - side) <= side }
 [0, 0, 0].inject(:+) = 0
 0 - 0 = 0 *
 
-
+https://www.quora.com/What-is-a-degenerate-triangle
+sort asc
+a+b<=c

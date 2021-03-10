@@ -22,14 +22,20 @@ class Triangle
     unique_sides == 3 if triangle?
   end
 
+  def degenerate?
+    # sort asc
+    # a+b<=c
+  end
+
   private
 
   def triangle?
-    # TODO: Rework to remove !
+    # DONE: Rework to remove !
     # the sum of the lengths of any two sides must be greater than or 
     # equal to the length of the third side
-    sum_sides = sides.sum
-    sides.none? { |side| (sum_sides - side) <= side }
+    #sum_sides = sides.sum
+    #sides.none? { |side| (sum_sides - side) <= side }
+    sides.all? { |side| side < sides.sum - side }
   end
 end
 

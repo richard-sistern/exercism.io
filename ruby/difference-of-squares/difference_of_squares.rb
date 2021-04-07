@@ -1,8 +1,20 @@
-=begin
-Write your code for the 'Difference Of Squares' exercise in this file. Make the tests in
-`difference_of_squares_test.rb` pass.
+class Squares
+    def initialize(value)
+        @values = (1..value).to_a
+    end
 
-To get started with TDD, see the `README.md` file in your
-`ruby/difference-of-squares` directory.
-=end
+    def square_of_sum
+    end
 
+    def sum_of_squares
+    end
+
+    def difference
+    end
+end
+
+if $PROGRAM_NAME == __FILE__
+  a =  Squares.new(100)    
+  puts a.inspect
+  puts a.instance_of? Array
+end
